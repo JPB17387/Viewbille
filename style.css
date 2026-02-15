@@ -174,3 +174,100 @@ footer p {
     color: #83677b;
 }
 
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    #name {
+        font-size: 2.5em;
+        padding: 20px 0 10px 0;
+    }
+
+    #navigation-bar {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 80%; /* Make buttons take more width */
+        margin: 0 auto; /* Center buttons */
+    }
+
+    main {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #pfp {
+        height: 200px;
+        width: 200px;
+        margin: 20px auto 30px auto;
+    }
+
+    .project-item {
+        padding: 20px;
+    }
+
+    .project-item h3 {
+        font-size: 1.2em;
+    }
+
+    .project-item p {
+        font-size: 0.95em;
+    }
+
+    #contact-section li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 2em;
+        padding: 15px 0 8px 0;
+    }
+
+    #navigation-bar {
+        gap: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        width: 90%;
+    }
+
+    main {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    #pfp {
+        height: 150px;
+        width: 150px;
+        margin: 15px auto 25px auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 0.85em;
+    }
+}
