@@ -1,20 +1,28 @@
-//let - mausab nimo ang iyang value 
-//const - dili mausab ang value
-const aboutMe = document.getElementById("aboutMe");
-const projects = document.getElementById("projects");
-const contacts = document.getElementById("contacts");
-const aboutTheDev = document.getElementById("aboutTheDev");
-const output = document.getElementById("output");
+const homeBtn = document.getElementById("homeBtn");
+const aboutMeBtn = document.getElementById("aboutMe");
+const projectsBtn = document.getElementById("projects");
+const contactsBtn = document.getElementById("contacts");
+const aboutTheDevBtn = document.getElementById("aboutTheDev");
 
-aboutMe.onclick = function(){
-    output.textContent = "About Me";
+const introSection = document.getElementById("intro");
+const aboutMeSection = document.getElementById("about-me-section");
+const projectsSection = document.getElementById("projects-section");
+const contactSection = document.getElementById("contact-section");
+const aboutDevSection = document.getElementById("about-dev-section");
+
+function showSection(sectionToShow) {
+    const sections = [introSection, aboutMeSection, projectsSection, contactSection, aboutDevSection];
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+    sectionToShow.style.display = "block";
 }
-projects.onclick = function(){
-    output.textContent = "Projects";
-}
-contacts.onclick = function(){
-    output.textContent = "Contacts";
-}
-aboutTheDev.onclick = function(){
-    output.textContent = "Jhon Paul";
-}
+
+// Initial load: show intro section
+showSection(introSection);
+
+homeBtn.addEventListener("click", () => showSection(introSection));
+aboutMeBtn.addEventListener("click", () => showSection(aboutMeSection));
+projectsBtn.addEventListener("click", () => showSection(projectsSection));
+contactsBtn.addEventListener("click", () => showSection(contactSection));
+aboutTheDevBtn.addEventListener("click", () => showSection(aboutDevSection));
